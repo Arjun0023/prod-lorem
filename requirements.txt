@@ -144,7 +144,6 @@ presidio_analyzer==2.2.358
 presidio_anonymizer==2.2.358
 propcache==0.3.0
 proto-plus==1.26.1
-protobuf==4.25.6
 prov==2.0.1
 puremagic==1.28
 pyarrow==19.0.1
