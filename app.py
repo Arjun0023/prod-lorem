@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import os
 from routers.upload import router as upload_router
 from routers.ask import router as ask_router
 from routers.summarize import router as summarize_router
@@ -28,4 +29,6 @@ app.include_router(ask_mongo_router)
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Get port from environment variable or default to 8000 for local development
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
